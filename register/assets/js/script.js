@@ -137,48 +137,48 @@ function addItem(item, price, quantity) {
 
     if (item === "Lucky Bento") {
         console.log("yup");
-        if (document.getElementById('receipt-item-Chicken Cat-Su')) {
-            let orderPriceString = document.getElementById('price-item-Chicken Cat-Su').innerText.replace(/\D/g, '');
-            let orderQuantityString = document.getElementById('quantity-item-Chicken Cat-Su').innerText.replace(/\D/g, '');
+        if (document.getElementById('receipt-item-Omurice')) {
+            let orderPriceString = document.getElementById('price-item-Omurice').innerText.replace(/\D/g, '');
+            let orderQuantityString = document.getElementById('quantity-item-Omurice').innerText.replace(/\D/g, '');
             let orderPrice = Number(orderPriceString);
             let orderQuantity = Number(orderQuantityString);
             orderPrice += 1 * 850
             orderQuantity += 1
             console.log(orderPrice);
             console.log(orderQuantity);
-            document.getElementById('price-item-Chicken Cat-Su').innerText = '$' + orderPrice
-            document.getElementById('quantity-item-Chicken Cat-Su').innerText = orderQuantity
+            document.getElementById('price-item-Omurice').innerText = '$' + orderPrice
+            document.getElementById('quantity-item-Omurice').innerText = orderQuantity
             totalPrice();
         }
         else {
             let receiptList = document.getElementById('tbody');
-            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-Chicken Cat-Su">
+            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-Omurice">
                 <td>
                     <figure class="media">
-                        <div class="img-wrap"><img draggable="false" src="assets/images/items/chickencatsu.png"
+                        <div class="img-wrap"><img draggable="false" src="assets/images/items/omurice.png"
                                 class="img-thumbnail img-xs"></div>
                         <figcaption class="media-body">
-                            <h6 class="title text-truncate menu-item">Chicken Cat-Su</h6>
+                            <h6 class="title text-truncate menu-item">Omurice</h6>
                         </figcaption>
                     </figure>
                 </td>
                 <td class="text-center">
                     <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
                         aria-label="...">
-                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Chicken Cat-Su',850,1)"><i
+                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Omurice',850,1)"><i
                                 class="fa fa-minus"></i></button>
-                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-Chicken Cat-Su" disabled>1</button>
-                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Chicken Cat-Su',850,1)"><i
+                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-Omurice" disabled>1</button>
+                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Omurice',850,1)"><i
                                 class="fa fa-plus"></i></button>
                     </div>
                 </td>
                 <td>
                     <div class="price-wrap">
-                        <var class="price" id="price-item-Chicken Cat-Su">$850</var>
+                        <var class="price" id="price-item-Omurice">$850</var>
                     </div>
                 </td>
                 <td class="text-right">
-                    <span class="btn btn-outline-danger" onclick="deleteItem('Chicken Cat-Su')"> <i class="fa fa-trash"></i></span>
+                    <span class="btn btn-outline-danger" onclick="deleteItem('Omurice')"> <i class="fa fa-trash"></i></span>
                 </td>
                 </tr>`
             totalPrice();
