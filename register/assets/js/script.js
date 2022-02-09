@@ -1189,6 +1189,102 @@ function addItem(item, price, quantity) {
             totalPrice();
         }  
     }  
+    if (item === "Kitty Meal") {
+        console.log("yup");
+        if (document.getElementById('receipt-item-Boba Tea')) {
+            let orderPriceString = document.getElementById('price-item-Boba Tea').innerText.replace(/\D/g, '');
+            let orderQuantityString = document.getElementById('quantity-item-Boba Tea').innerText.replace(/\D/g, '');
+            let orderPrice = Number(orderPriceString);
+            let orderQuantity = Number(orderQuantityString);
+            orderPrice += 1 * 200
+            orderQuantity += 1
+            console.log(orderPrice);
+            console.log(orderQuantity);
+            document.getElementById('price-item-Omurice').innerText = '$' + orderPrice
+            document.getElementById('quantity-item-Omurice').innerText = orderQuantity
+            totalPrice();
+        }
+        else {
+            let receiptList = document.getElementById('tbody');
+            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-Boba Tea">
+                <td>
+                    <figure class="media">
+                        <div class="img-wrap"><img draggable="false" src="assets/images/items/bobatea.png"
+                                class="img-thumbnail img-xs"></div>
+                        <figcaption class="media-body">
+                            <h6 class="title text-truncate menu-item">Boba Tea</h6>
+                        </figcaption>
+                    </figure>
+                </td>
+                <td class="text-center">
+                    <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
+                        aria-label="...">
+                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Boba Tea',750,1)"><i
+                                class="fa fa-minus"></i></button>
+                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-Boba Tea" disabled>1</button>
+                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Boba Tea',750,1)"><i
+                                class="fa fa-plus"></i></button>
+                    </div>
+                </td>
+                <td>
+                    <div class="price-wrap">
+                        <var class="price" id="price-item-Boba Tea">$200</var>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <span class="btn btn-outline-danger" onclick="deleteItem('Boba Tea')"> <i class="fa fa-trash"></i></span>
+                </td>
+                </tr>`
+            totalPrice();
+        }
+        if (document.getElementById('receipt-item-Cupcat')) {
+            let orderPriceString = document.getElementById('price-item-Cupcat').innerText.replace(/\D/g, '');
+            let orderQuantityString = document.getElementById('quantity-item-Cupcat').innerText.replace(/\D/g, '');
+            let orderPrice = Number(orderPriceString);
+            let orderQuantity = Number(orderQuantityString);
+            orderPrice += 1 * 200
+            orderQuantity += 1
+            console.log(orderPrice);
+            console.log(orderQuantity);
+            document.getElementById('price-item-Cupcat').innerText = '$' + orderPrice
+            document.getElementById('quantity-item-Cupcat').innerText = orderQuantity
+            totalPrice();
+        }
+        else {
+            let receiptList = document.getElementById('tbody');
+            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-Cupcat">
+                <td>
+                    <figure class="media">
+                        <div class="img-wrap"><img draggable="false" src="assets/images/items/dumplings.png"
+                                class="img-thumbnail img-xs"></div>
+                        <figcaption class="media-body">
+                            <h6 class="title text-truncate menu-item">Cupcat</h6>
+                        </figcaption>
+                    </figure>
+                </td>
+                <td class="text-center">
+                    <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
+                        aria-label="...">
+                        <button type="button" class="m-btn btn btn-default" disabled onclick="removeItem('Cupcat',200,1)"><i
+                                class="fa fa-minus"></i></button>
+                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-Cupcat" disabled>1</button>
+                        <button type="button" class="m-btn btn btn-default" disabled onclick="addItem('Cupcat',200,1)"><i
+                                class="fa fa-plus"></i></button>
+                    </div>
+                </td>
+                <td>
+                    <div class="price-wrap">
+                        <var class="price" id="price-item-Cupcat">$200</var>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <span href="#" class="btn btn-outline-danger" onclick="deleteItem('Cupcat')"> <i class="fa fa-trash"></i></span>
+                </td>
+                </tr>`
+            totalPrice();
+        }
+    } 
+
 }
 
 function removeItem(item, price, quantity) {
