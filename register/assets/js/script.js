@@ -82,6 +82,12 @@ const Menu = {
         items: ["Cat Burglar"],
         display: true,
         image: 'assets/images/items/catburglar.png'
+    },
+    "Kitty Meal": {
+        price: 400,
+        items: ["Kitty Meal"],
+        display: true,
+        image: 'assets/images/items/kittymeal.png'
     }
 };
 
