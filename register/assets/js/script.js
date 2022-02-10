@@ -736,7 +736,7 @@ function addItem(item, price, quantity) {
             let orderQuantityString = document.getElementById('quantity-item-Chicken Cat-Su').innerText.replace(/\D/g, '');
             let orderPrice = Number(orderPriceString);
             let orderQuantity = Number(orderQuantityString);
-            orderPrice += 1 * 850
+            orderPrice += 1 * 750
             orderQuantity += 1
             console.log(orderPrice);
             console.log(orderQuantity);
@@ -759,16 +759,16 @@ function addItem(item, price, quantity) {
                 <td class="text-center">
                     <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
                         aria-label="...">
-                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Chicken Cat-Su',850,1)"><i
+                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Chicken Cat-Su',750,1)"><i
                                 class="fa fa-minus"></i></button>
                         <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-Chicken Cat-Su" disabled>1</button>
-                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Chicken Cat-Su',850,1)"><i
+                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Chicken Cat-Su',750,1)"><i
                                 class="fa fa-plus"></i></button>
                     </div>
                 </td>
                 <td>
                     <div class="price-wrap">
-                        <var class="price" id="price-item-Chicken Cat-Su">$850</var>
+                        <var class="price" id="price-item-Chicken Cat-Su">$750</var>
                     </div>
                 </td>
                 <td class="text-right">
@@ -785,7 +785,7 @@ function addItem(item, price, quantity) {
             let orderQuantityString = document.getElementById('quantity-item-Omurice').innerText.replace(/\D/g, '');
             let orderPrice = Number(orderPriceString);
             let orderQuantity = Number(orderQuantityString);
-            orderPrice += 1 * 750
+            orderPrice += 1 * 850
             orderQuantity += 1
             console.log(orderPrice);
             console.log(orderQuantity);
@@ -808,16 +808,16 @@ function addItem(item, price, quantity) {
                 <td class="text-center">
                     <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
                         aria-label="...">
-                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Omurice',750,1)"><i
+                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Omurice',850,1)"><i
                                 class="fa fa-minus"></i></button>
                         <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-Omurice" disabled>1</button>
-                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Omurice',750,1)"><i
+                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Omurice',850,1)"><i
                                 class="fa fa-plus"></i></button>
                     </div>
                 </td>
                 <td>
                     <div class="price-wrap">
-                        <var class="price" id="price-item-Omurice">$750</var>
+                        <var class="price" id="price-item-Omurice">$850</var>
                     </div>
                 </td>
                 <td class="text-right">
