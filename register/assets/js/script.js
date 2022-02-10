@@ -6,13 +6,13 @@ const Menu = {
         image: 'assets/images/items/uwubowl.png'
     },
     "Chicken Cat-Su": {
-        price: 850,
+        price: 750,
         items: ["Chicken Cat-Su"],
         display: true,
         image: 'assets/images/items/chickencatsu.png'
     },
     "Omurice": {
-        price: 750,
+        price: 850,
         items: ["Omurice"],
         display: true,
         image: 'assets/images/items/omurice.png'
