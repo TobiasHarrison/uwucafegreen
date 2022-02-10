@@ -88,6 +88,30 @@ const Menu = {
         items: ["Kitty Meal"],
         display: true,
         image: 'assets/images/items/kittymeal.png'
+    },
+    "LuckyBentoOmurice": {
+        price: 850,
+        items: ["LuckyBentoOmurice"],
+        display: false,
+        image: 'assets/images/items/omurice.png'
+    },
+    "LuckyBentoOngiri": {
+        price: 300,
+        items: ["LuckyBentoOngiri"],
+        display: false,
+        image: 'assets/images/items/onigiri.png'
+    },
+    "LuckyBentoMeowCaroons": {
+        price: 300,
+        items: ["LuckyBentoMeowCaroons"],
+        display: false,
+        image: 'assets/images/items/omurice.png'
+    },
+    "LuckyBentoUwUPoP": {
+        price: 50,
+        items: ["LuckyBentoUwUPop"],
+        display: false,
+        image: 'assets/images/items/uwupop.png'
     }
 };
 
@@ -137,187 +161,187 @@ function addItem(item, price, quantity) {
 
     if (item === "Lucky Bento") {
         console.log("yup");
-        if (document.getElementById('receipt-item-Omurice')) {
-            let orderPriceString = document.getElementById('price-item-Omurice').innerText.replace(/\D/g, '');
-            let orderQuantityString = document.getElementById('quantity-item-Omurice').innerText.replace(/\D/g, '');
+        if (document.getElementById('receipt-item-LuckyBentoOmurice')) {
+            let orderPriceString = document.getElementById('price-item-LuckyBentoOmurice').innerText.replace(/\D/g, '');
+            let orderQuantityString = document.getElementById('quantity-item-LuckyBentoOmurice').innerText.replace(/\D/g, '');
             let orderPrice = Number(orderPriceString);
             let orderQuantity = Number(orderQuantityString);
             orderPrice += 1 * 850
             orderQuantity += 1
             console.log(orderPrice);
             console.log(orderQuantity);
-            document.getElementById('price-item-Omurice').innerText = '$' + orderPrice
-            document.getElementById('quantity-item-Omurice').innerText = orderQuantity
+            document.getElementById('price-item-LuckyBentoOmurice').innerText = '$' + orderPrice
+            document.getElementById('quantity-item-LuckyBentoOmurice').innerText = orderQuantity
             totalPrice();
         }
         else {
             let receiptList = document.getElementById('tbody');
-            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-Omurice">
+            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-LuckyBentoOmurice">
                 <td>
                     <figure class="media">
                         <div class="img-wrap"><img draggable="false" src="assets/images/items/omurice.png"
                                 class="img-thumbnail img-xs"></div>
                         <figcaption class="media-body">
-                            <h6 class="title text-truncate menu-item">Omurice</h6>
+                            <h6 class="title text-truncate menu-item">LuckyBentoOmurice</h6>
                         </figcaption>
                     </figure>
                 </td>
                 <td class="text-center">
                     <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
                         aria-label="...">
-                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Omurice',850,1)"><i
+                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('LuckyBentoOmurice',850,1)"><i
                                 class="fa fa-minus"></i></button>
-                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-Omurice" disabled>1</button>
-                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Omurice',850,1)"><i
+                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-LuckyBentoOmurice" disabled>1</button>
+                        <button type="button" class="m-btn btn btn-default" onclick="addItem('LuckyBentoOmurice',850,1)"><i
                                 class="fa fa-plus"></i></button>
                     </div>
                 </td>
                 <td>
                     <div class="price-wrap">
-                        <var class="price" id="price-item-Omurice">$850</var>
+                        <var class="price" id="price-item-LuckyBentoOmurice">$850</var>
                     </div>
                 </td>
                 <td class="text-right">
-                    <span class="btn btn-outline-danger" onclick="deleteItem('Omurice')"> <i class="fa fa-trash"></i></span>
+                    <span class="btn btn-outline-danger" onclick="deleteItem('LuckyBentoOmurice')"> <i class="fa fa-trash"></i></span>
                 </td>
                 </tr>`
             totalPrice();
         }
-        if (document.getElementById('receipt-item-Onigiri')) {
-            let orderPriceString = document.getElementById('price-item-Onigiri').innerText.replace(/\D/g, '');
-            let orderQuantityString = document.getElementById('quantity-item-Onigiri').innerText.replace(/\D/g, '');
+        if (document.getElementById('receipt-item-LuckyBentoOngiri')) {
+            let orderPriceString = document.getElementById('price-item-LuckyBentoOngiri').innerText.replace(/\D/g, '');
+            let orderQuantityString = document.getElementById('quantity-item-LuckyBentoOngiri').innerText.replace(/\D/g, '');
             let orderPrice = Number(orderPriceString);
             let orderQuantity = Number(orderQuantityString);
             orderPrice += 1 * 300
             orderQuantity += 1
             console.log(orderPrice);
             console.log(orderQuantity);
-            document.getElementById('price-item-Onigiri').innerText = '$' + orderPrice
-            document.getElementById('quantity-item-Onigiri').innerText = orderQuantity
+            document.getElementById('price-item-LuckyBentoOngiri').innerText = '$' + orderPrice
+            document.getElementById('quantity-item-LuckyBentoOngiri').innerText = orderQuantity
             totalPrice();
         }
         else {
             let receiptList = document.getElementById('tbody');
-            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-Onigiri">
+            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-LuckyBentoOngiri">
                 <td>
                     <figure class="media">
                         <div class="img-wrap"><img draggable="false" src="assets/images/items/onigiri.png"
                                 class="img-thumbnail img-xs"></div>
                         <figcaption class="media-body">
-                            <h6 class="title text-truncate menu-item">Onigiri</h6>
+                            <h6 class="title text-truncate menu-item">LuckyBentoOngiri</h6>
                         </figcaption>
                     </figure>
                 </td>
                 <td class="text-center">
                     <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
                         aria-label="...">
-                        <button type="button" class="m-btn btn btn-default" disabled onclick="removeItem('Onigiri',300,1)"><i
+                        <button type="button" class="m-btn btn btn-default" disabled onclick="removeItem('LuckyBentoOngiri',300,1)"><i
                                 class="fa fa-minus"></i></button>
-                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-Onigiri" disabled>1</button>
-                        <button type="button" class="m-btn btn btn-default" disabled onclick="addItem('Onigiri',300,1)"><i
+                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-LuckyBentoOngiri" disabled>1</button>
+                        <button type="button" class="m-btn btn btn-default" disabled onclick="addItem('LuckyBentoOngiri',300,1)"><i
                                 class="fa fa-plus"></i></button>
                     </div>
                 </td>
                 <td>
                     <div class="price-wrap">
-                        <var class="price" id="price-item-Onigiri">$300</var>
+                        <var class="price" id="price-item-LuckyBentoOngiri">$300</var>
                     </div>
                 </td>
                 <td class="text-right">
-                    <span href="#" class="btn btn-outline-danger" onclick="deleteItem('Onigiri')"> <i class="fa fa-trash"></i></span>
+                    <span href="#" class="btn btn-outline-danger" onclick="deleteItem('LuckyBentoOngiri')"> <i class="fa fa-trash"></i></span>
                 </td>
                 </tr>`
             totalPrice();
         }
     
-        if (document.getElementById('receipt-item-Meow-caroons')) {
-            let orderPriceString = document.getElementById('price-item-Meow-caroons').innerText.replace(/\D/g, '');
-            let orderQuantityString = document.getElementById('quantity-item-Meow-caroons').innerText.replace(/\D/g, '');
+        if (document.getElementById('receipt-item-LuckyBentoMeowCaroons')) {
+            let orderPriceString = document.getElementById('price-item-LuckyBentoMeowCaroons').innerText.replace(/\D/g, '');
+            let orderQuantityString = document.getElementById('quantity-item-LuckyBentoMeowCaroons').innerText.replace(/\D/g, '');
             let orderPrice = Number(orderPriceString);
             let orderQuantity = Number(orderQuantityString);
             orderPrice += 1 * 300
             orderQuantity += 1
             console.log(orderPrice);
             console.log(orderQuantity);
-            document.getElementById('price-item-Meow-caroons').innerText = '$' + orderPrice
-            document.getElementById('quantity-item-Meow-caroons').innerText = orderQuantity
+            document.getElementById('price-item-LuckyBentoMeowCaroons').innerText = '$' + orderPrice
+            document.getElementById('quantity-item-LuckyBentoMeowCaroons').innerText = orderQuantity
             totalPrice();
         }
         else {
             let receiptList = document.getElementById('tbody');
-            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-Meow-caroons">
+            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-LuckyBentoMeowCaroons">
                 <td>
                     <figure class="media">
                         <div class="img-wrap"><img draggable="false" src="assets/images/items/meowcaroons.png"
                                 class="img-thumbnail img-xs"></div>
                         <figcaption class="media-body">
-                            <h6 class="title text-truncate menu-item">Meow-caroons</h6>
+                            <h6 class="title text-truncate menu-item">LuckyBentoMeowCaroons</h6>
                         </figcaption>
                     </figure>
                 </td>
                 <td class="text-center">
                     <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
                         aria-label="...">
-                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Meow-caroons',300,1)"><i
+                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('LuckyBentoMeowCaroons',300,1)"><i
                                 class="fa fa-minus"></i></button>
-                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-Meow-caroons" disabled>1</button>
-                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Meow-caroons',300,1)"><i
+                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-LuckyBentoMeowCaroons" disabled>1</button>
+                        <button type="button" class="m-btn btn btn-default" onclick="addItem('LuckyBentoMeowCaroons',300,1)"><i
                                 class="fa fa-plus"></i></button>
                     </div>
                 </td>
                 <td>
                     <div class="price-wrap">
-                        <var class="price" id="price-item-Meow-caroons">$300</var>
+                        <var class="price" id="price-item-LuckyBentoMeowCaroons">$300</var>
                     </div>
                 </td>
                 <td class="text-right">
-                    <span class="btn btn-outline-danger" onclick="deleteItem('Meow-caroons')"> <i class="fa fa-trash"></i></span>
+                    <span class="btn btn-outline-danger" onclick="deleteItem('LuckyBentoMeowCaroons')"> <i class="fa fa-trash"></i></span>
                 </td>
                 </tr>`
             totalPrice();
         }
-        if (document.getElementById('receipt-item-UwU-Pop')) {
-            let orderPriceString = document.getElementById('price-item-UwU-Pop').innerText.replace(/\D/g, '');
-            let orderQuantityString = document.getElementById('quantity-item-UwU-Pop').innerText.replace(/\D/g, '');
+        if (document.getElementById('receipt-item-LuckyBentoUwUPop')) {
+            let orderPriceString = document.getElementById('price-item-LuckyBentoUwUPop').innerText.replace(/\D/g, '');
+            let orderQuantityString = document.getElementById('quantity-item-LuckyBentoUwUPop').innerText.replace(/\D/g, '');
             let orderPrice = Number(orderPriceString);
             let orderQuantity = Number(orderQuantityString);
             orderPrice += 1 * 50
             orderQuantity += 1
             console.log(orderPrice);
             console.log(orderQuantity);
-            document.getElementById('price-item-UwU-Pop').innerText = '$' + orderPrice
-            document.getElementById('quantity-item-UwU-Pop').innerText = orderQuantity
+            document.getElementById('price-item-LuckyBentoUwUPop').innerText = '$' + orderPrice
+            document.getElementById('quantity-item-LuckyBentoUwUPop').innerText = orderQuantity
             totalPrice();
         }
         else {
             let receiptList = document.getElementById('tbody');
-            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-UwU-Pop">
+            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-LuckyBentoUwUPop">
                 <td>
                     <figure class="media">
                         <div class="img-wrap"><img draggable="false" src="assets/images/items/uwupop.png"
                                 class="img-thumbnail img-xs"></div>
                         <figcaption class="media-body">
-                            <h6 class="title text-truncate menu-item">UwU-Pop - <i>DiscountedBento</i></h6>
+                            <h6 class="title text-truncate menu-item">LuckyBentoUwUPop</i></h6>
                         </figcaption>
                     </figure>
                 </td>
                 <td class="text-center">
                     <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
                         aria-label="...">
-                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('UwU-Pop',50,1)"><i
+                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('LuckyBentoUwUPop',50,1)"><i
                                 class="fa fa-minus"></i></button>
-                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-UwU-Pop" disabled>1</button>
-                        <button type="button" class="m-btn btn btn-default" onclick="addItem('UwU-Pop',50,1)"><i
+                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-LuckyBentoUwUPop" disabled>1</button>
+                        <button type="button" class="m-btn btn btn-default" onclick="addItem('LuckyBentoUwUPop',50,1)"><i
                                 class="fa fa-plus"></i></button>
                     </div>
                 </td>
                 <td>
                     <div class="price-wrap">
-                        <var class="price" id="price-item-UwU-Pop">$50</var>
+                        <var class="price" id="price-item-LuckyBentoUwUPop">$50</var>
                     </div>
                 </td>
                 <td class="text-right">
-                    <span class="btn btn-outline-danger" onclick="deleteItem('Meow-caroons')"> <i class="fa fa-trash"></i></span>
+                    <span class="btn btn-outline-danger" onclick="deleteItem('LuckyBentoUwUPop')"> <i class="fa fa-trash"></i></span>
                 </td>
                 </tr>`
             totalPrice();
