@@ -1230,8 +1230,8 @@ function addItem(item, price, quantity) {
             orderQuantity += 1
             console.log(orderPrice);
             console.log(orderQuantity);
-            document.getElementById('price-item-Omurice').innerText = '$' + orderPrice
-            document.getElementById('quantity-item-Omurice').innerText = orderQuantity
+            document.getElementById('price-item-Boba Tea').innerText = '$' + orderPrice
+            document.getElementById('quantity-item-Boba Tea').innerText = orderQuantity
             totalPrice();
         }
         else {
@@ -1285,7 +1285,7 @@ function addItem(item, price, quantity) {
             receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-Cupcat">
                 <td>
                     <figure class="media">
-                        <div class="img-wrap"><img draggable="false" src="assets/images/items/dumplings.png"
+                        <div class="img-wrap"><img draggable="false" src="assets/images/items/cupcat.png"
                                 class="img-thumbnail img-xs"></div>
                         <figcaption class="media-body">
                             <h6 class="title text-truncate menu-item">Cupcat</h6>
