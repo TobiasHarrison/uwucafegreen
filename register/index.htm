@@ -32,36 +32,85 @@
 		.btn-error {
 			color: #ef5f5f;
 		}
+
+		.navbar-nav{
+		    width: 100%;
+		    align-items: center;
+		}
+		.bg-light{
+			background-color: #ffffff !important;
+    		color: #f176b2 !important;
+		}
+		.bg-dark {
+			background-color: #282828 !important;
+			color: #f176b2 !important;
+		}
+		.bg-default-light {
+			background-color: #F2F3F8 !important;
+		}
+		.bg-default-dark {
+			background-color: #343434 !important;
+		}
+		.light{
+			background-color: #ffffff !important;
+		}
+		.dark{
+			background-color: #282828 !important;
+		}
+		.os-content{padding: 20px !important;}
+		.os-theme-dark > .os-scrollbar:hover > .os-scrollbar-track > .os-scrollbar-handle {
+		    background: rgb(255 182 182 / 55%);
+		}
+		#itemsContainer.itemsContainer-dark div .card-product{
+			background-color: #FFFFFF;
+		    box-shadow: none;
+		    border-color: #3d3d3d;
+		}
+		#itemsContainer.itemsContainer-dark div .card-product{
+			background-color: #343434;
+		    box-shadow: none;
+		    border-color: #3d3d3d;
+		}
+		#itemsContainer.itemsContainer-dark div .card-product .info-wrap{
+		    border-top: 1px solid #3d3d3d;
+		}
+		#itemsContainer.itemsContainer-light div .card-product .info-wrap{
+		    border-top: 1px solid #eee);
+		}
+		.os-content #itemsContainer, #cart, #items{
+			background-color: transparent !important;
+		}
 	</style>
 	<!-- custom style -->
 </head>
 
-<body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
+<body class="light">
+	<nav class="navbar navbar-expand-lg bg-light" aria-label="Tenth navbar example">
 		<div class="container-fluid">
 			<div class="navbar-collapse justify-content-md-center" id="navbarsExample08">
 				<ul class="navbar-nav">
 					<li class="nav-item text-center">
 						<a class="nav-link active h3" aria-current="page" href="#">UwU Cafe</a>
 					</li>
+					<li class="nav-item ml-md-auto"><a href="#" class="btn btn-primary switch">Switch Light/Dark</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<!-- ========================= SECTION CONTENT ========================= -->
-	<section class="section-content padding-y-sm bg-default" style="height: inherit;">
+	<section class="section-content padding-y-sm bg-default-light" style="height: inherit;">
 		<div class="container-fluid" style="height: inherit;">
 			<div class="row" style="height: inherit;">
-				<div class="col-md-6 card padding-y-sm card order-2 order-md-1" style="margin-bottom: 10px;">
+				<div class="col-md-6 card padding-y-sm card order-2 order-md-1 bg-light" style="margin-bottom: 10px;">
 					<span id="items">
-						<div id="itemsContainer" class="row">
+						<div id="itemsContainer" class="row itemsContainer-light">
 
 
 						</div> <!-- row.// -->
 					</span>
 				</div>
 				<div class="col-md-6 order-1 order-md-2" style="height: 250px;">
-					<div class="box">
+					<div class="box bg-light">
 						<dl class="dlist-align h2">
 							<dt>Total: </dt>
 							<dd class="text-right b" id="totalCost"> $0 </dd>
@@ -75,7 +124,7 @@
 							</div>
 						</div>
 					</div> <!-- box.// -->
-					<div class="card">
+					<div class="card bg-light">
 						<span id="cart">
 							<table width="100%" class="table-sm table-hover shopping-cart-wrap">
 								<thead class="text-muted">
@@ -118,6 +167,18 @@
 			$("#cart").height("500px");
 			$("#cart").overlayScrollbars({});
 		});
+
+		$('.switch').click(()=>{
+		    $([".light [class*='-light']", ".dark [class*='-dark']"]).each((i,ele)=>{
+		        $(ele).toggleClass('bg-light bg-dark')
+		        $(ele).toggleClass('text-light text-dark')
+		        $(ele).toggleClass('navbar-light navbar-dark')
+		        $(ele).toggleClass('bg-default-light bg-default-dark')
+		        $(ele).toggleClass('itemsContainer-light itemsContainer-dark')
+		    })
+		    // toggle body class selector
+		    $('body').toggleClass('light dark')
+		})
 	</script>
 </body>
 
