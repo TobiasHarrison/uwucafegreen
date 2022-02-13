@@ -159,7 +159,7 @@ function addItem(item, price, quantity) {
                                 class="img-thumbnail img-xs"></div>
                         <figcaption class="media-body">
                             <h6 class="title text-truncate menu-item">LuckyBentoCombo</h6>
-                            <h6 class="title text-truncate menu-item">Omurice, Onigiri, Meowcaroons, UwU-Pop</h6>
+                            <h6 class="title text-truncate staff-help">Omurice, Onigiri, Meowcaroons, UwU-Pop</h6>
                         </figcaption>
                     </figure>
                 </td>
