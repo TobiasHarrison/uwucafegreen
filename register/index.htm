@@ -92,7 +92,7 @@
 					<li class="nav-item text-center">
 						<a class="nav-link active h3" aria-current="page" href="#">UwU Cafe</a>
 					</li>
-					<li class="nav-item ml-md-auto"><a href="#" class="btn btn-primary switch">Switch Light/Dark</a></li>
+					<li class="nav-item ml-md-auto"><a href="#" class="btn btn-primary switch" id="modeSwitch">Switch Light/Dark</a></li>
 				</ul>
 			</div>
 		</div>
@@ -179,6 +179,22 @@
 		    // toggle body class selector
 		    $('body').toggleClass('light dark')
 		})
+
+		$(function () {
+			//The passed argument has to be at least a empty object or a object with your desired options
+			//$("body").overlayScrollbars({ });
+			$("#items").height("100%");
+			$("#items").overlayScrollbars({
+				overflowBehavior: {
+					x: "hidden",
+					y: "scroll"
+				}
+			});
+			$("#cart").height("500px");
+			$("#cart").overlayScrollbars({});
+		});
+
+		document.getElementById('modeSwitch').click();
 	</script>
 </body>
 
