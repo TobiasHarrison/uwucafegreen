@@ -75,13 +75,13 @@ const Menu = {
         price: 999,
         items: ["9 Lives"],
         display: true,
-        image: 'assets/images/items/9lives.png'
+        image: 'assets/images/items/9LivesCombo.png'
     },
     "Cat Burglar": {
         price: 1150,
         items: ["Cat Burglar"],
         display: true,
-        image: 'assets/images/items/catburglar.png'
+        image: 'assets/images/items/CatBurglarCombo.png'
     },
     "Kitty Meal": {
         price: 400,
