@@ -210,7 +210,7 @@ function addItem(item, price, quantity) {
                                 class="img-thumbnail img-xs"></div>
                         <figcaption class="media-body">
                             <h6 class="title text-truncate menu-item">9LivesCombo</h6>
-                            <h8 class="title text-truncate staff-help"><i>UwU Bowl, Miso Soup, Boba Tea</i></h8>
+                            <h8 class="title text-truncate staff-help"><i>UwU Bowl, Miso Soup, Flan</i></h8>
                         </figcaption>
                     </figure>
                 </td>
