@@ -54,7 +54,7 @@ const Menu = {
         image: 'assets/images/items/uwupop.png'
     },
     "Sakura Tea": {
-        price: 200,
+        price: 150,
         items: ["Sakura"],
         display: true,
         image: 'assets/images/items/sakura.png'
