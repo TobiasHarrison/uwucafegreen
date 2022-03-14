@@ -17,6 +17,12 @@ const Menu = {
         display: true,
         image: 'assets/images/items/omurice.png'
     },
+    "Pawcakes": {
+        price: 500,
+        items: ["Pawcakes"],
+        display: true,
+        image: 'assets/images/items/pawcake.png'
+    },
     "Onigiri": {
         price: 300,
         items: ["onigiri"],
@@ -46,6 +52,12 @@ const Menu = {
         items: ["UwU-Pop"],
         display: true,
         image: 'assets/images/items/uwupop.png'
+    },
+    "Sakura Tea": {
+        price: 200,
+        items: ["Sakura"],
+        display: true,
+        image: 'assets/images/items/sakura.png'
     },
     "Meow-caroons": {
         price: 300,
@@ -88,6 +100,12 @@ const Menu = {
         items: ["Kitty Meal"],
         display: true,
         image: 'assets/images/items/kittymeal.png'
+    },
+    "Pawcakes Meal": {
+        price: 700,
+        items: ["PawcakesMeal"],
+        display: true,
+        image: 'assets/images/items/pawcakesmeal.png'
     }
 };
 
@@ -877,7 +895,154 @@ function addItem(item, price, quantity) {
             totalPrice();
         }
     } 
-
+    if (item === "Pawcakes Meal") {
+        console.log("yup");
+        if (document.getElementById('receipt-item-PawcakesMeal')) {
+            let orderPriceString = document.getElementById('price-item-PawcakesMeal').innerText.replace(/\D/g, '');
+            let orderQuantityString = document.getElementById('quantity-item-PawcakesMeal').innerText.replace(/\D/g, '');
+            let orderPrice = Number(orderPriceString);
+            let orderQuantity = Number(orderQuantityString);
+            orderPrice += 1 * 700
+            orderQuantity += 1
+            console.log(orderPrice);
+            console.log(orderQuantity);
+            document.getElementById('price-item-PawcakesMeal').innerText = '$' + orderPrice
+            document.getElementById('quantity-item-PawcakesMeal').innerText = orderQuantity
+            totalPrice();
+        }
+        else {
+            let receiptList = document.getElementById('tbody');
+            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-PawcakesMeal">
+                <td>
+                    <figure class="media">
+                        <div class="img-wrap"><img draggable="false" src="assets/images/items/pawcakesmeal.png"
+                                class="img-thumbnail img-xs"></div>
+                        <figcaption class="media-body">
+                            <h6 class="title text-truncate menu-item">PawcakesMeal</h6>
+                            <h8 class="title text-truncate staff-help"><i>Pawcakes, Sakura Tea, Cupcat</i></h8>
+                        </figcaption>
+                    </figure>
+                </td>
+                <td class="text-center">
+                    <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
+                        aria-label="...">
+                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('PawcakesMeal',700,1)"><i
+                                class="fa fa-minus"></i></button>
+                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-PawcakesMeal" disabled>1</button>
+                        <button type="button" class="m-btn btn btn-default" onclick="addItem('PawcakesMeal',700,1)"><i
+                                class="fa fa-plus"></i></button>
+                    </div>
+                </td>
+                <td>
+                    <div class="price-wrap">
+                        <var class="price" id="price-item-PawcakesMeal">$700</var>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <span class="btn btn-outline-danger" onclick="deleteItem('PawcakesMeal')"> <i class="fa fa-trash"></i></span>
+                </td>
+                </tr>`
+            totalPrice();
+        }
+    } 
+    if (item === "Pawcakes") {
+        console.log("yup");
+        if (document.getElementById('receipt-item-Pawcakes')) {
+            let orderPriceString = document.getElementById('price-item-Pawcakes').innerText.replace(/\D/g, '');
+            let orderQuantityString = document.getElementById('quantity-item-Pawcakes').innerText.replace(/\D/g, '');
+            let orderPrice = Number(orderPriceString);
+            let orderQuantity = Number(orderQuantityString);
+            orderPrice += 1 * 500
+            orderQuantity += 1
+            console.log(orderPrice);
+            console.log(orderQuantity);
+            document.getElementById('price-item-Pawcakes').innerText = '$' + orderPrice
+            document.getElementById('quantity-item-Pawcakes').innerText = orderQuantity
+            totalPrice();
+        }
+        else {
+            let receiptList = document.getElementById('tbody');
+            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-Pawcakes">
+                <td>
+                    <figure class="media">
+                        <div class="img-wrap"><img draggable="false" src="assets/images/items/pawcake.png"
+                                class="img-thumbnail img-xs"></div>
+                        <figcaption class="media-body">
+                            <h6 class="title text-truncate menu-item">Pawcakes</h6>
+                        </figcaption>
+                    </figure>
+                </td>
+                <td class="text-center">
+                    <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
+                        aria-label="...">
+                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Pawcakes',500,1)"><i
+                                class="fa fa-minus"></i></button>
+                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-Pawcakes" disabled>1</button>
+                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Pawcakes',500,1)"><i
+                                class="fa fa-plus"></i></button>
+                    </div>
+                </td>
+                <td>
+                    <div class="price-wrap">
+                        <var class="price" id="price-item-Pawcakes">$500</var>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <span class="btn btn-outline-danger" onclick="deleteItem('Pawcakes')"> <i class="fa fa-trash"></i></span>
+                </td>
+                </tr>`
+            totalPrice();
+        }
+    }
+    if (item === "Sakura Tea") {
+        console.log("yup");
+        if (document.getElementById('receipt-item-Sakura')) {
+            let orderPriceString = document.getElementById('price-item-Sakura').innerText.replace(/\D/g, '');
+            let orderQuantityString = document.getElementById('quantity-item-Sakura').innerText.replace(/\D/g, '');
+            let orderPrice = Number(orderPriceString);
+            let orderQuantity = Number(orderQuantityString);
+            orderPrice += 1 * 200
+            orderQuantity += 1
+            console.log(orderPrice);
+            console.log(orderQuantity);
+            document.getElementById('price-item-Sakura').innerText = '$' + orderPrice
+            document.getElementById('quantity-item-Sakura').innerText = orderQuantity
+            totalPrice();
+        }
+        else {
+            let receiptList = document.getElementById('tbody');
+            receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-Sakura">
+                <td>
+                    <figure class="media">
+                        <div class="img-wrap"><img draggable="false" src="assets/images/items/sakura.png"
+                                class="img-thumbnail img-xs"></div>
+                        <figcaption class="media-body">
+                            <h6 class="title text-truncate menu-item">Sakura</h6>
+                        </figcaption>
+                    </figure>
+                </td>
+                <td class="text-center">
+                    <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
+                        aria-label="...">
+                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Sakura',200,1)"><i
+                                class="fa fa-minus"></i></button>
+                        <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-Sakura" disabled>1</button>
+                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Sakura',200,1)"><i
+                                class="fa fa-plus"></i></button>
+                    </div>
+                </td>
+                <td>
+                    <div class="price-wrap">
+                        <var class="price" id="price-item-Sakura">$200</var>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <span class="btn btn-outline-danger" onclick="deleteItem('Sakura')"> <i class="fa fa-trash"></i></span>
+                </td>
+                </tr>`
+            totalPrice();
+        }
+    }  
 }
 
 function removeItem(item, price, quantity) {
