@@ -1001,7 +1001,7 @@ function addItem(item, price, quantity) {
             let orderQuantityString = document.getElementById('quantity-item-Sakura').innerText.replace(/\D/g, '');
             let orderPrice = Number(orderPriceString);
             let orderQuantity = Number(orderQuantityString);
-            orderPrice += 1 * 200
+            orderPrice += 1 * 150
             orderQuantity += 1
             console.log(orderPrice);
             console.log(orderQuantity);
@@ -1024,16 +1024,16 @@ function addItem(item, price, quantity) {
                 <td class="text-center">
                     <div class="m-btn-group m-btn-group--pill btn-group mr-2" role="group"
                         aria-label="...">
-                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Sakura',200,1)"><i
+                        <button type="button" class="m-btn btn btn-default" onclick="removeItem('Sakura',150,1)"><i
                                 class="fa fa-minus"></i></button>
                         <button type="button" class="m-btn btn btn-default quantity" id="quantity-item-Sakura" disabled>1</button>
-                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Sakura',200,1)"><i
+                        <button type="button" class="m-btn btn btn-default" onclick="addItem('Sakura',150,1)"><i
                                 class="fa fa-plus"></i></button>
                     </div>
                 </td>
                 <td>
                     <div class="price-wrap">
-                        <var class="price" id="price-item-Sakura">$200</var>
+                        <var class="price" id="price-item-Sakura">$150</var>
                     </div>
                 </td>
                 <td class="text-right">
