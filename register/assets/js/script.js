@@ -865,7 +865,7 @@ function addItem(item, price, quantity) {
             receiptList.innerHTML += `<tr class="receipt-item" id="receipt-item-KittyMeal">
                 <td>
                     <figure class="media">
-                        <div class="img-wrap"><img draggable="false" src="assets/images/items/KittyMeal.png"
+                        <div class="img-wrap"><img draggable="false" src="assets/images/items/kittymeal.png"
                                 class="img-thumbnail img-xs"></div>
                         <figcaption class="media-body">
                             <h6 class="title text-truncate menu-item">KittyMeal</h6>
